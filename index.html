@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <title>Website Builder | Websites That Grow Your Business</title>
+  <meta name="description" content="Professional, mobile-friendly websites for small businesses, shops, professionals and startups. Contact us for a website quote.">
+  <style>
+    :root{--bg:#0b1020;--panel:#121a30;--text:#f7f8fc;--muted:#aeb8ce;--accent:#77e0c1;--accent2:#9b8cff;--line:rgba(255,255,255,.12)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:5;background:rgba(11,16,32,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;font-size:1.15rem;letter-spacing:-.03em}.brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:25px;color:var(--muted);font-size:.92rem}.navlinks a:hover{color:var(--accent)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:999px;background:var(--accent);color:#07131b;font-weight:800;border:0;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}
+    .btn.secondary{background:transparent;border:1px solid var(--line);color:var(--text)}
+    .hero{padding:94px 0 82px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(119,224,193,.16),transparent 68%);right:-100px;top:-130px;pointer-events:none}
+    .eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.16em;font-size:.76rem}
+    h1{font-size:clamp(2.65rem,7vw,5.4rem);line-height:1.03;letter-spacing:-.065em;max-width:780px;margin:18px 0}
+    h1 span{background:linear-gradient(90deg,var(--accent),#b8adff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{max-width:610px;color:var(--muted);font-size:1.1rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:42px;color:var(--muted);font-size:.9rem}.trust b{color:var(--text)}
+    section{padding:76px 0}.section-head{max-width:650px;margin-bottom:34px}.section-head h2{font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.045em;line-height:1.1;margin:10px 0}.section-head p{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px}.card .ico{font-size:1.6rem}.card h3{margin:12px 0 7px}.card p{margin:0;color:var(--muted);font-size:.95rem}
+    .soft{background:#0e1528;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:20px;border-left:2px solid var(--accent);background:rgba(255,255,255,.035);border-radius:0 14px 14px 0}.step strong{color:var(--accent);font-size:.8rem;letter-spacing:.1em}.step h3{margin:8px 0}.step p{color:var(--muted);font-size:.9rem;margin:0}
+    .showcase{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.mock{min-height:260px;border-radius:22px;padding:25px;background:linear-gradient(135deg,#1b3150,#1c1a3b);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}.mock.alt{background:linear-gradient(135deg,#263e3a,#202044)}.mock small{color:var(--accent);letter-spacing:.12em;text-transform:uppercase}.mock h3{font-size:1.8rem;line-height:1.1;max-width:360px;margin:15px 0}.mock p{color:#d1d8e8;max-width:420px;margin:0}.tag{display:inline-block;border:1px solid rgba(255,255,255,.25);padding:6px 10px;border-radius:30px;font-size:.75rem;color:#dce5f4;width:max-content}
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.price-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px}.price-card.featured{border-color:var(--accent);box-shadow:0 0 0 1px rgba(119,224,193,.15)}.price-card h3{margin:0}.price-card .price{font-size:1.8rem;font-weight:800;margin:12px 0 2px}.price-card p,.price-card li{color:var(--muted);font-size:.92rem}.price-card ul{padding-left:18px;min-height:118px}.price-card .btn{width:100%;margin-top:10px}
+    .contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:start}.contact-box{background:var(--panel);border:1px solid var(--line);padding:26px;border-radius:20px}.contact-box p{color:var(--muted)}label{display:block;font-size:.88rem;margin:13px 0 6px;color:#dce3f1}input,select,textarea{width:100%;padding:13px 14px;border-radius:11px;border:1px solid var(--line);background:#0b1224;color:var(--text);font:inherit}textarea{min-height:110px;resize:vertical}form .btn{margin-top:16px;width:100%}
+    footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .wa{position:fixed;right:18px;bottom:18px;z-index:6;background:#25d366;color:#05210e;padding:13px 18px;border-radius:999px;font-weight:800;box-shadow:0 8px 30px #0006}
+    @media(max-width:800px){.navlinks{display:none}.grid,.pricing{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.showcase,.contact{grid-template-columns:1fr}.hero{padding:72px 0 60px}}
+    @media(max-width:540px){.grid,.pricing,.steps{grid-template-columns:1fr}.hero{padding-top:58px}section{padding:58px 0}.btn{width:100%}.actions{display:grid}.trust{gap:12px}.foot{display:block}.foot div+div{margin-top:8px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#home">WEB<span>BUILDER</span></a>
+      <div class="navlinks"><a href="#services">Services</a><a href="#work">Our work</a><a href="#process">Process</a><a href="#pricing">Packages</a><a href="#contact">Contact</a></div>
+      <a class="btn" href="#contact">Get a free quote</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="eyebrow">Your business deserves a great website</div>
+      <h1>Turn your idea into a <span>powerful website.</span></h1>
+      <p>We create clean, modern and mobile-friendly websites that help businesses build trust, showcase their services and get more customer enquiries.</p>
+      <div class="actions"><a class="btn" href="#contact">Let's build your website</a><a class="btn secondary" href="https://wa.me/918308408093?text=Hi%2C%20I%20want%20to%20build%20a%20website." target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+      <div class="trust"><span>✓ <b>Mobile-friendly</b> designs</span><span>✓ <b>Modern</b> layouts</span><span>✓ <b>Personal</b> support</span></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">What we build</div><h2>Everything your business needs online.</h2><p>From a simple business presence to a complete online store, choose the website that fits your goals.</p></div>
+      <div class="grid">
+        <article class="card"><div class="ico">🌐</div><h3>Business Websites</h3><p>Present your company, services, contact details and business information professionally.</p></article>
+        <article class="card"><div class="ico">🛍️</div><h3>E-commerce Websites</h3><p>Showcase products, share product details and help customers place orders online.</p></article>
+        <article class="card"><div class="ico">📱</div><h3>Landing Pages</h3><p>Focused pages for promotions, campaigns, services and customer enquiries.</p></article>
+        <article class="card"><div class="ico">🍽️</div><h3>Restaurant Websites</h3><p>Display menus, food photos, opening information and enquiry or order links.</p></article>
+        <article class="card"><div class="ico">💼</div><h3>Portfolio Websites</h3><p>Highlight your work, skills, achievements and professional contact information.</p></article>
+        <article class="card"><div class="ico">🧰</div><h3>Website Updates</h3><p>Refresh existing pages, update content and improve the overall presentation.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="work">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Design possibilities</div><h2>A website style for every kind of business.</h2><p>These are sample design directions. We can tailor the colours, layout and content to your brand.</p></div>
+      <div class="showcase">
+        <div class="mock"><div><small>01 / Business website concept</small><h3>Make a strong first impression.</h3><p>A polished online home for your company, with clear services and easy ways to contact you.</p></div><span class="tag">Professional · Clear · Responsive</span></div>
+        <div class="mock alt"><div><small>02 / Online store concept</small><h3>Put your products in the spotlight.</h3><p>A clean product-focused experience designed to help shoppers explore your catalogue.</p></div><span class="tag">Product-led · Simple · Modern</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Simple process</div><h2>From first idea to launch.</h2><p>Clear steps, regular communication and a website shaped around your requirements.</p></div>
+      <div class="steps">
+        <div class="step"><strong>STEP 01</strong><h3>Tell us your idea</h3><p>Share your business details, goals and the type of website you need.</p></div>
+        <div class="step"><strong>STEP 02</strong><h3>Plan the design</h3><p>We discuss the pages, content, look and features for your website.</p></div>
+        <div class="step"><strong>STEP 03</strong><h3>Build and review</h3><p>Review the website and share feedback before it is finalised.</p></div>
+        <div class="step"><strong>STEP 04</strong><h3>Launch</h3><p>Prepare your approved website for publishing on your domain and hosting.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="pricing">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Website packages</div><h2>Choose a starting point.</h2><p>Final pricing depends on pages, features, content and integrations. Contact us for a clear custom quote.</p></div>
+      <div class="pricing">
+        <article class="price-card"><h3>Starter</h3><div class="price">Custom quote</div><p>For individuals and small businesses.</p><ul><li>Basic business website</li><li>Mobile-friendly layout</li><li>Contact information</li><li>Essential pages</li></ul><a class="btn secondary" href="#contact">Enquire now</a></article>
+        <article class="price-card featured"><h3>Business</h3><div class="price">Custom quote</div><p>For growing businesses and service providers.</p><ul><li>Multi-section website</li><li>Services and enquiry form</li><li>WhatsApp contact option</li><li>Customised design</li></ul><a class="btn" href="#contact">Enquire now</a></article>
+        <article class="price-card"><h3>Online Store</h3><div class="price">Custom quote</div><p>For businesses selling products online.</p><ul><li>Product catalogue</li><li>Product detail pages</li><li>Order enquiry flow</li><li>Store features discussed</li></ul><a class="btn secondary" href="#contact">Enquire now</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <div class="eyebrow">Let's talk</div><h2 style="font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05;letter-spacing:-.05em">Ready to take your business online?</h2>
+        <p style="color:var(--muted)">Tell us what you need. We'll discuss your website idea and the next steps.</p>
+        <div class="contact-box"><strong>Call or WhatsApp</strong><p><a href="tel:+918308408093">+91 83084 08093</a></p><a class="btn" href="https://wa.me/918308408093?text=Hi%2C%20I%20am%20interested%20in%20a%20website." target="_blank" rel="noopener">Message us on WhatsApp</a></div>
+      </div>
+      <div class="contact-box">
+        <h3>Request a website quote</h3>
+        <form id="enquiryForm">
+          <label for="name">Your name</label><input id="name" name="name" placeholder="Enter your name" required>
+          <label for="business">Business name</label><input id="business" name="business" placeholder="Enter your business name">
+          <label for="type">Website type</label><select id="type" name="type"><option>Business website</option><option>E-commerce website</option><option>Landing page</option><option>Restaurant website</option><option>Portfolio website</option><option>Other</option></select>
+          <label for="details">Tell us about your requirement</label><textarea id="details" name="details" placeholder="What kind of website do you need?"></textarea>
+          <button class="btn" type="submit">Send enquiry on WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><div>© <span id="year"></span> WEB BUILDER. All rights reserved.</div><div>Websites designed around your business goals.</div></div></footer>
+<a class="wa" href="https://wa.me/918308408093?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20website%20services." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp ↗</a>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('enquiryForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const business = document.getElementById('business').value.trim();
+    const type = document.getElementById('type').value;
+    const details = document.getElementById('details').value.trim();
+    const message = `Hello, I want a website quote.%0AName: ${encodeURIComponent(name)}%0ABusiness: ${encodeURIComponent(business || 'Not provided')}%0AWebsite type: ${encodeURIComponent(type)}%0ADetails: ${encodeURIComponent(details || 'Not provided')}`;
+    window.open(`https://wa.me/918308408093?text=${message}`, '_blank', 'noopener');
+  });
+</script>
+</body>
+</html>
